@@ -16,6 +16,8 @@
         <StackLayout Margin="10" Padding="10" Orientation="Horizontal">
             <Button Text="Go" x:Name="Go"  Clicked="Go_Clicked" />
             <Button Text="Add" x:Name="Add" />
+            <Button Text="Close" x:Name="Close" />
+
         </StackLayout>
     </StackLayout>
 

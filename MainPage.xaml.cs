@@ -14,6 +14,7 @@ namespace XF_Mid2_Lab1
         {
             InitializeComponent();
             Add.Clicked += (s, e) => Navigation.PushAsync(new AddPage());
+            Close.Clicked += (s, e) => Environment.Exit(0);
 
         }
 
@@ -24,7 +25,7 @@ namespace XF_Mid2_Lab1
                 var address = await App.AddressSQLite.GetAddressAsync(HomeNumber.Text, City.Text);
                 if (address != null)
                 {
-                    await Navigation.PushAsync(new InfoPage(address));
+                    await Navigation.PushAsync(new InfoPage3(address));
                    
                 }
                 else
