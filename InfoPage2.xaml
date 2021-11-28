@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XF_Mid2_Lab1.InfoPage2">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Info. Page" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <StackLayout Margin="10" Padding="10" >
+            <Label Text="Show" x:Name="Show" />
+        </StackLayout>
+        <StackLayout Margin="15" Padding="10">
+            <!-- <Label Text="Show" x:Name="showLabel"/> -->
+            <ListView x:Name="myListView" HasUnevenRows="True" >
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label  Text="{Binding Id}"/>
+                                <Label Text="{Binding Name}" />
+                                <Label Text="{Binding HomeNumber}" />
+                                <Label Text="{Binding City}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <Entry Placeholder=" Home Number" x:Name="HN" />
+        <Entry Placeholder=" City" x:Name="City" />
+        <StackLayout Margin="10" Padding="10" Orientation="Horizontal">
+            <Button Text="AllPeople" x:Name="AllPeople" Clicked="AllPeople_Clicked" />
+            <Button Text="AllAddress" x:Name="AllAddress" Clicked="AllAddress_Clicked" />
+            <Button Text="Control" x:Name="Control" />
+            <Button Text="Logout" x:Name="Logout" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
