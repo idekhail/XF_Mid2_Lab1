@@ -28,7 +28,7 @@ namespace XF_Mid2_Lab1
         }
 
         // Get all people living in address by HomeNumber and City.
-        public Task<List<Address>> GetAddressPeopleAsync(string home, string city)
+        public Task<List<Address>> GetAllPeopleAddressAsync(string home, string city)
         {
             return db.Table<Address>().Where(i => i.HomeNumber == home && i.City == city).ToListAsync();
         }

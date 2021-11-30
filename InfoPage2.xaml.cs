@@ -29,10 +29,11 @@ namespace XF_Mid2_Lab1
 
         private async void AllPeople_Clicked(object sender, EventArgs e)
         {
+
             if (!string.IsNullOrEmpty(HN.Text) && (!string.IsNullOrEmpty(City.Text)))
             {
-                var addressPeople = await App.AddressSQLite.GetAddressPeopleAsync(HN.Text, City.Text);
-                myListView.ItemsSource = addressPeople;
+                var addressPeople = await App.AddressSQLite.GetAllPeopleAddressAsync(HN.Text, City.Text);
+                myList.ItemsSource = addressPeople;
             }
             else
                 await DisplayAlert("Error", "HomeNumber or City is empty", "Ok");
@@ -55,3 +56,34 @@ namespace XF_Mid2_Lab1
         }     
     }
 }
+
+
+
+
+ //< ListView x: Name = "myListView" HasUnevenRows = "True" >
+    
+ //   < ListView.ItemTemplate >
+    
+ //       < DataTemplate >
+    
+ //           < ViewCell >
+    
+ //               < StackLayout Orientation = "Horizontal" >
+     
+ //                       < Label  Text = "{Binding Id}" />
+      
+ //                       < Label Text = "{Binding Name}" />
+       
+ //                       < Label Text = "{Binding HomeNumber}" />
+        
+ //                       < Label Text = "{Binding City}" />
+         
+ //                       </ StackLayout >
+         
+ //                   </ ViewCell >
+         
+ //               </ DataTemplate >
+         
+ //           </ ListView.ItemTemplate >
+         
+ // </ ListView >

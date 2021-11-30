@@ -25,7 +25,7 @@ namespace XF_Mid2_Lab1
                 var address = await App.AddressSQLite.GetAddressAsync(HomeNumber.Text, City.Text);
                 if (address != null)
                 {
-                    await Navigation.PushAsync(new InfoPage3(address));
+                    await Navigation.PushAsync(new InfoPage2(address));
                    
                 }
                 else

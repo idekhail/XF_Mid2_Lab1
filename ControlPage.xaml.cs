@@ -32,7 +32,7 @@ namespace XF_Mid2_Lab1
                 address.City = City.Text;
 
                 await App.AddressSQLite.SaveAddressAsync(address);
-                await Navigation.PushAsync(new InfoPage(this.address));
+                await Navigation.PushAsync(new InfoPage2(this.address));
             }
             else
                 await DisplayAlert("Error", "Feilds are empty", "Ok");
@@ -44,7 +44,7 @@ namespace XF_Mid2_Lab1
         }
         private void Cancel_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new InfoPage(this.address));
+            Navigation.PushAsync(new InfoPage2(this.address));
         }
     }
 }

@@ -32,7 +32,7 @@ namespace XF_Mid2_Lab1
             if (!string.IsNullOrEmpty(HN.Text) && (!string.IsNullOrEmpty(City.Text)))
             {
                 string data = "";
-                var addressPeople = await App.AddressSQLite.GetAddressPeopleAsync(HN.Text, City.Text);
+                var addressPeople = await App.AddressSQLite.GetAllPeopleAddressAsync(HN.Text, City.Text);
                 if (addressPeople != null)
                 {
                     foreach(var a in addressPeople)
